@@ -18,14 +18,14 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
+                          <tr *ngFor="let i of data">
                             
-                            <td></td>
-                            <td></td>
-                            <td>@</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>{{i._id}}</td>
+                            <td>{{i.courseTitle}}</td>
+                            <td>{{i.courseDescription}}</td>
+                            <td>{{i.courseDuration}}</td>
+                            <td>{{i.courseDate}}</td>
+                            <td>{{i.courseVenue}}</td>
                           </tr>
                         
                         </tbody>

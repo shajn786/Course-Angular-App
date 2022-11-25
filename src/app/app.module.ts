@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CourseAddComponent } from './course-add/course-add.component';
 import { CourseViewAllComponent } from './course-view-all/course-view-all.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const myRoutes: Routes=[
   {
@@ -20,7 +21,8 @@ const myRoutes: Routes=[
   declarations: [
     AppComponent,
     CourseAddComponent,
-    CourseViewAllComponent
+    CourseViewAllComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

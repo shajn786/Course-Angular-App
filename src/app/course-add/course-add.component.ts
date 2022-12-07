@@ -8,11 +8,11 @@ import { ApiService } from '../api.service';
 })
 export class CourseAddComponent {
 
-  courseTitle=""
-  courseDescription=""
-  courseDuration=""
-  courseDate=""
-  courseVenue=""
+  title=""
+  description=""
+  venue=""
+  duration=""
+  date=""
 
   constructor (private api : ApiService)
   {
@@ -22,7 +22,7 @@ export class CourseAddComponent {
   
 readValues = ()=>
 {
-  let data : any= {"courseTitle":this.courseTitle,"courseDescription":this.courseDescription,"courseDuration":this.courseDuration,"courseDate":this.courseDate,"courseVenue":this.courseVenue}
+  let data : any= {"title":this.title,"description":this.description,"venue":this.venue,"duration":this.duration,"date":this.date}
   console.log(data)
   this.api.addCourse(data).subscribe(
     
@@ -32,11 +32,11 @@ readValues = ()=>
       if(response.status == "success")
       {
         alert("Added Successfully")
-        this.courseDate=""
-        this.courseDescription=""
-        this.courseDuration=""
-        this.courseTitle=""
-        this.courseVenue=""
+        this.title=""
+        this.description=""
+        this.venue=""
+        this.duration=""
+        this.date=""
       }
       else
       {

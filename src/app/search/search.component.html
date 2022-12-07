@@ -1,0 +1,57 @@
+
+<app-navbar></app-navbar>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="row g-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <h1 style="color:brown">Search Course</h1>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label class="form-label">Course Title</label>
+                    <input name="title"  [(ngModel)]="title"  type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button (click)="readValues()"  class="btn btn-primary">Search</button>
+                </div>
+            </div>
+
+           <div class="row mt-4 g-3">
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <table class="table">
+                    <thead>
+                      <tr >
+                        
+                        
+                        <th scope="col">Course Description</th>
+                        <th scope="col">Course Venue</th>
+                        <th scope="col">Course Duration</th>
+                        <th scope="col">Course Date</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor ="let j of searchdata">
+                        
+                        
+                      
+                        <td>{{j.description}}</td>
+                        <td>{{j.venue}}</td>
+                        <td>{{j.duration}}</td>
+                        <td>{{j.date}}</td>
+                        
+                       
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+            </div>
+           
+           </div>
+
+        </div>
+    </div>
+</div>

@@ -8,7 +8,8 @@ import { AppComponent } from './app.component';
 import { CourseAddComponent } from './course-add/course-add.component';
 import { CourseViewAllComponent } from './course-view-all/course-view-all.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { SearchComponent } from './search/search.component'
 
 const myRoutes: Routes=[
   {
@@ -16,6 +17,9 @@ const myRoutes: Routes=[
   },
   {
     path:"viewall",component:CourseViewAllComponent
+  },
+  {
+    path:"search",component:SearchComponent
   }
 ]
 
@@ -24,7 +28,8 @@ const myRoutes: Routes=[
     AppComponent,
     CourseAddComponent,
     CourseViewAllComponent,
-    NavbarComponent
+    NavbarComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
